@@ -3,12 +3,14 @@ from fake_useragent import UserAgent
 
 logger = logging.getLogger(__name__)
 
+
 class RandomUserAgentMiddleware(object):
     def __init__(self, crawler):
         super(RandomUserAgentMiddleware, self).__init__()
 
         fallback = crawler.settings.get('FAKEUSERAGENT_FALLBACK', None)
-        self.ua = UserAgent(fallback=fallback)
+        location = crawler.settings.get('USERAGENT_CACHE_FILE', None)
+        self.ua = UserAgent(fallback=fallback, location=location)
         self.per_proxy = crawler.settings.get('RANDOM_UA_PER_PROXY', False)
         self.ua_type = crawler.settings.get('RANDOM_UA_TYPE', 'random')
         self.proxy2ua = {}
@@ -21,7 +23,7 @@ class RandomUserAgentMiddleware(object):
         def get_ua():
             '''Gets random UA based on the type setting (random, firefox…)'''
             return getattr(self.ua, self.ua_type)
-        
+
         if self.per_proxy:
             proxy = request.meta.get('proxy')
             if proxy not in self.proxy2ua:

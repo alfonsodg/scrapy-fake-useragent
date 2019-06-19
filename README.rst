@@ -73,3 +73,5 @@ There's a configuration parameter ``FAKEUSERAGENT_FALLBACK`` defaulting to
 ``None``. You can set it to a string value, for example ``Mozilla`` or
 ``Your favorite browser``, this configuration can completely disable any
 annoying exception.
+Also we got ``USERAGENT_CACHE_FILE`` which provides a path to save the UA avoiding network
+errors to download the database
