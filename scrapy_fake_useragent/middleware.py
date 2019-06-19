@@ -10,7 +10,7 @@ class RandomUserAgentMiddleware(object):
 
         fallback = crawler.settings.get('FAKEUSERAGENT_FALLBACK', None)
         location = crawler.settings.get('USERAGENT_CACHE_FILE', None)
-        self.ua = UserAgent(fallback=fallback, location=location)
+        self.ua = UserAgent(fallback=fallback, path=location)
         self.per_proxy = crawler.settings.get('RANDOM_UA_PER_PROXY', False)
         self.ua_type = crawler.settings.get('RANDOM_UA_TYPE', 'random')
         self.proxy2ua = {}
