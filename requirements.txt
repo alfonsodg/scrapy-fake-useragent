@@ -1,1 +1,2 @@
-fake-useragent
+#fake-useragent
+git+https://github.com/alfonsodg/fake-useragent.git
