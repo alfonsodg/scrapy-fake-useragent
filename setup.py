@@ -22,9 +22,10 @@ setup(
         'scrapy_fake_useragent',
     ],
     install_requires=[
-        'fake-useragent>=0.1.15'
+        'package @ git+https://github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15'
+#        'fake-useragent>=0.1.15'
     ],
-    dependency_links=[
-        "git+https://github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15"
-    ]
+#    dependency_links=[
+#        "git+https://github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15"
+#    ]
 )
