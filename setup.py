@@ -24,4 +24,7 @@ setup(
     install_requires=[
         'fake-useragent'
     ],
+    dependency_links=[
+        "git+https://github.com/alfonsodg/fake-useragent.git"
+    ]
 )
