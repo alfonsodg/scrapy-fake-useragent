@@ -18,9 +18,9 @@ setup(
         'Programming Language :: Python',
         'Topic :: Internet :: WWW/HTTP',
     ],
-    packages=[
-        'scrapy_fake_useragent',
-    ],
+#    packages=[
+#        'scrapy_fake_useragent',
+#    ],
     install_requires=['fake-useragent==0.1.15'],
     dependency_links=['git+ssh://git@github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15']
 )
