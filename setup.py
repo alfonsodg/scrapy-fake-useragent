@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='scrapy-fake-useragent',
-    version='1.2.0',
+    version='1.2.5',
     description='Use a random User-Agent provided by fake-useragent for every request',
     long_description=open('README.rst').read(),
     keywords='scrapy proxy user-agent web-scraping',
@@ -21,7 +21,7 @@ setup(
     packages=[
         'scrapy_fake_useragent',
     ],
-#    install_requires=['fake-useragent==0.1.15'],
-#    dependency_links=['git+ssh://git@github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15'],
-    install_requires=['package @ git+ssh://git@github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15'],
+    install_requires=['fake-useragent==0.1.15'],
+    dependency_links=['git+ssh://git@github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15'],
+#    install_requires=['package @ git+ssh://git@github.com/alfonsodg/fake-useragent@0.1.15#egg=fake-useragent-0.1.15'],
 )
